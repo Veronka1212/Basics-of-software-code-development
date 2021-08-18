@@ -1,6 +1,9 @@
 package by.epam.basics.cycles;
 
+import java.time.LocalDate;
 import java.util.Scanner;
+
+import static jdk.nashorn.internal.objects.Global.Infinity;
 
 
 class Task_1 {
@@ -34,14 +37,14 @@ class Task_2 {
         int b = scan.nextInt();
         System.out.println("Введите h ");
         int h = scan.nextInt();
-        int x=a;
+        int x = a;
         while (x >= a & x <= b) {
             if (x > 2) {
                 System.out.println("y=" + x);
             } else {
                 System.out.println("y=" + x * (-1));
             }
-            x=x+h;
+            x = x + h;
         }
     }
 }
@@ -51,10 +54,10 @@ class Task_3 {
     //Найти сумму квадратов первых ста чисел.
 
     public static void main(String[] args) {
-        int sum = 0;
+        long sum = 0;
         int i = 0;
         while (i <= 100) {
-            sum = (int) (sum + Math.pow(i, 2));
+            sum = (long) (sum + Math.pow(i, 2));
             i = i + 1;
         }
         System.out.print("Сумма квадратов первых 100 чисел равна " + sum);
@@ -66,12 +69,17 @@ class Task_4 {
     //Составить программу нахождения произведения квадратов первых двухсот чисел.
 
     public static void main(String[] args) {
-        long sum = 1, i = 0;
+        double product = 1;
+        int i = 1;
         while (i <= 200) {
-            sum = (long) (sum * Math.pow(i, 2));
+            product = product * Math.pow(i, 2);
             i = i + 1;
         }
-        System.out.print("Произведение квадратов первых 200 чисел равно " + sum);
+        if (product == Infinity) {
+            System.out.println("Выход за пределы, невозможно посчитать произведение в данном типе");
+        } else {
+            System.out.print("Произведение квадратов первых 200 чисел равно " + product);
+        }
     }
 }
 
@@ -126,8 +134,7 @@ class Task_7 {
         System.out.print("Введите n: ");
         int n = scan.nextInt();
         System.out.print("Введите m: ");
-        int m = scan.nextInt();
-        int i = m, y = 2;
+        int i = scan.nextInt(), y = 2;
         while (i <= n) {
             System.out.print("Делители числа " + i + ": ");
             y = 2;
