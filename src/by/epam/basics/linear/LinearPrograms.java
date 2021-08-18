@@ -2,12 +2,11 @@ package by.epam.basics.linear;
 
 import java.io.*;
 import java.util.Scanner;
-
 import static java.lang.Math.*;
 
 public class LinearPrograms {
 
-    class Task1 {
+    static class Task1 {
 
         //Найдите значение функции: z = ( (a – 3 ) * b / 2) + c.
 
@@ -18,7 +17,7 @@ public class LinearPrograms {
         }
     }
 
-    class Task2 {
+    static class Task2 {
 
         // Вычислить значение выражения по формуле (все переменные принимают действительные значения):
         //(b + sqrt(Math.pow(b, 2) + 4 * a)) / (2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2)
@@ -27,11 +26,11 @@ public class LinearPrograms {
             double a = 1, b = 1, c = 1;
             double function;
             function = (b + sqrt(Math.pow(b, 2) + 4 * a)) / (2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2);
-            System.out.println(function);
+            System.out.println("Значение равно "+function);
         }
     }
 
-    class Task3 {
+    static class Task3 {
 
         //Вычислить значение выражения по формуле (все переменные принимают действительные значения):
         //((sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y))) * Math.tan(x * y)
@@ -44,7 +43,7 @@ public class LinearPrograms {
         }
     }
 
-    class Task4 {
+    static class Task4 {
 
         //Дано действительное число R вида nnn.ddd (три цифровых разряда в дробной и целой частях). Поменять местами
         //дробную и целую части числа и вывести полученное значение числа.
@@ -64,7 +63,7 @@ public class LinearPrograms {
     }
 
 
-    class Task5 {
+    static class Task5 {
 
         //Дано натуральное число Т, которое представляет длительность прошедшего времени в секундах. Вывести
         //данное значение длительности в часах, минутах и секундах в следующей форме: ННч ММмин SSc.
@@ -78,7 +77,7 @@ public class LinearPrograms {
         }
     }
 
-    class Task6 {
+    static class Task6 {
 
         //Для данной области составить линейную программу, которая печатает true, если точка с координатами (х, у)
         //принадлежит закрашенной области, и false — в противном случае
